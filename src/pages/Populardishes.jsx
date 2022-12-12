@@ -2,6 +2,7 @@ import React from "react";
 import "./PopularDishes.css";
 
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
+import { FaHeart } from "react-icons/fa";
 
 import Dish1 from "../assets/dish-1.png";
 import Dish2 from "../assets/dish-2.png";
@@ -94,6 +95,9 @@ const Populardishes = () => {
                   <div className="price">
                     <span>{price}</span>
                     <button className="btn">Add to cart</button>
+                  </div>
+                  <div className="favourite-icon">
+                    <FaHeart size={18} />
                   </div>
                 </div>
               </div>

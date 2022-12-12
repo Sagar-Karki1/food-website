@@ -35,18 +35,23 @@
   justify-content: center;
 }
 .food-card {
-  width: 260px;
+  width: 280px;
   height: 310px;
   background-color: white;
   border-radius: 0.4rem;
   box-shadow: 5px 4px 15px -1px rgb(0 0 0 / 20%);
+  position: relative;
 }
 .card-img {
   width: 100%;
   padding: 0.5rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 60%;
+}
+.card-img img {
+  height: 80%;
 }
 .details-wrapper {
   width: 100%;
@@ -81,6 +86,26 @@
   color: var(--green);
   font-size: 1.1rem;
   font-weight: 700;
+}
+
+.favourite-icon {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.favourite-icon:hover {
+  background-color: var(--green);
+  color: #fff;
 }
 
 @media only screen and (max-width: 420px) {
