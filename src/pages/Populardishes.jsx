@@ -11,6 +11,56 @@ import Dish5 from "../assets/dish-5.png";
 import Dish6 from "../assets/dish-6.png";
 
 const Populardishes = () => {
+  const foodDetails = [
+    {
+      id: 1,
+      img: Dish1,
+      foodInfo:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, molestiae.",
+      price: "15.58$",
+      dishName: "Chicken Burger",
+    },
+    {
+      id: 2,
+      img: Dish2,
+      foodInfo:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, molestiae.",
+      price: "15.58$",
+      dishName: "Chicken Burger",
+    },
+    {
+      id: 3,
+      img: Dish3,
+      foodInfo:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, molestiae.",
+      price: "15.58$",
+      dishName: "Chicken Burger",
+    },
+    {
+      id: 4,
+      img: Dish4,
+      foodInfo:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, molestiae.",
+      price: "15.58$",
+      dishName: "Chicken Burger",
+    },
+    {
+      id: 5,
+      img: Dish5,
+      foodInfo:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, molestiae.",
+      price: "15.58$",
+      dishName: "Chicken Burger",
+    },
+    {
+      id: 6,
+      img: Dish6,
+      foodInfo:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, molestiae.",
+      price: "15.58$",
+      dishName: "Chicken Burger",
+    },
+  ];
   return (
     <>
       <div name="Dishes" className="populardish-container">
@@ -20,71 +70,34 @@ const Populardishes = () => {
             <h1>Popular dishes</h1>
           </div>
           <div className="card-container">
-            <div className="food-card">
-              <div className="card-img">
-                <img src={Dish1} alt="" />
+            {foodDetails.map(({ id, img, foodInfo, dishName, price }) => (
+              <div key={id} className="food-card">
+                <div className="card-img">
+                  <img src={img} alt="" />
+                </div>
+                <div className="details-wrapper">
+                  <div className="heading-rating">
+                    <div className="food-name">
+                      <h3>{dishName}</h3>
+                    </div>
+                    <div className="food-rating">
+                      <BsStarFill size={12} color="green" />
+                      <BsStarFill size={12} color="green" />
+                      <BsStarFill size={12} color="green" />
+                      <BsStarFill size={12} color="green" />
+                      <BsStarHalf size={12} color="green" />
+                    </div>
+                  </div>
+                  <div className="food-info">
+                    <p>{foodInfo}</p>
+                  </div>
+                  <div className="price">
+                    <span>{price}</span>
+                    <button className="btn">Add to cart</button>
+                  </div>
+                </div>
               </div>
-              <div className="food-heading">
-                <h3>Tasty Food</h3>
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarHalf color="green" />
-              </div>
-            </div>
-            <div className="food-card">
-              <div className="card-img">
-                <img src={Dish1} alt="" />
-              </div>
-              <div className="food-heading">
-                <h3>Tasty Food</h3>
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarHalf color="green" />
-              </div>
-            </div>
-            <div className="food-card">
-              <div className="card-img">
-                <img src={Dish1} alt="" />
-              </div>
-              <div className="food-heading">
-                <h3>Tasty Food</h3>
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarHalf color="green" />
-              </div>
-            </div>
-            <div className="food-card">
-              <div className="card-img">
-                <img src={Dish1} alt="" />
-              </div>
-              <div className="food-heading">
-                <h3>Tasty Food</h3>
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarHalf color="green" />
-              </div>
-            </div>
-            <div className="food-card">
-              <div className="card-img">
-                <img src={Dish1} alt="" />
-              </div>
-              <div className="food-heading">
-                <h3>Tasty Food</h3>
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarFill color="green" />
-                <BsStarHalf color="green" />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
