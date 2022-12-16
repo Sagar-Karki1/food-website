@@ -1,32 +1,28 @@
-.populardish-container {
+.menu-container {
   width: 100%;
-  height: fit-content;
+  height: max-content;
   padding: 1rem;
   background-color: rgb(250, 250, 250);
 }
-.wrapper {
-  width: 100%;
-  max-width: 1080px;
-  margin: auto;
-}
-.heading {
+
+.menu-heading {
   text-align: center;
 }
-.heading span {
+.menu-heading span {
   color: var(--green);
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: capitalize;
 }
 
-.heading h1 {
+.menu-heading h3 {
   color: var(--black);
   text-transform: capitalize;
   font-weight: 700;
-  font-size: 2.8rem;
+  font-size: 2rem;
   line-height: 3.2rem;
 }
-.card-container {
+.card-wrapper {
   display: grid;
   grid-template-columns: auto auto auto;
   row-gap: 2.6rem;
@@ -34,7 +30,7 @@
   margin-top: 1rem;
   justify-content: center;
 }
-.food-card {
+.menu-card {
   width: 280px;
   height: 310px;
   background-color: white;
@@ -42,30 +38,31 @@
   box-shadow: 5px 4px 15px -1px rgb(0 0 0 / 20%);
   position: relative;
 }
-.card-img {
+.menu-img {
   width: 100%;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 60%;
 }
-.card-img img {
-  height: 80%;
-}
-.details-wrapper {
+.menu-img img {
+  height: 100%;
   width: 100%;
-  height: 30%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
+.menutext-wrapper {
+  width: 100%;
+  height: 40%;
   padding: 0 0.4rem;
 }
 
-.heading-rating {
+.rating {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.food-name h3 {
+.menu-name h3 {
   font-size: 1.3rem;
   color: var(--black);
   font-weight: 700;
@@ -109,12 +106,12 @@
 }
 
 @media only screen and (max-width: 420px) {
-  .card-container {
+  .card-wrapper {
     display: grid;
     grid-template-columns: auto;
     row-gap: 2.6rem;
   }
-  .food-card {
+  .menu-card {
     width: 85%;
     margin: auto;
   }
